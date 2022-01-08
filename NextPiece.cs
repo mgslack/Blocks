@@ -1,18 +1,33 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
+/*
+ * Class defining the component to show the 'next' piece once the current piece is
+ * placed in the board.
+ * 
+ * Author: Michael G. Slack
+ * Date Written: 2021-11-18
+ * 
+ * ----------------------------------------------------------------------------
+ * 
+ * Date Revised: yyyy-mm-dd - xxxx.
+ * 
+ */
 namespace Blocks
 {
     public partial class NextPiece : UserControl
     {
+        #region Properties
         private BlocksGame _game = null;
         public BlocksGame Game { set => _game = value; }
+        #endregion
 
         public NextPiece()
         {
             InitializeComponent();
         }
 
+        #region Component private events
         private void NextPiece_Paint(object sender, PaintEventArgs e)
         {
             int width = e.ClipRectangle.Width;
@@ -38,5 +53,6 @@ namespace Blocks
                 }
             }
         }
+        #endregion
     }
 }

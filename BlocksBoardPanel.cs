@@ -1,18 +1,33 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
+/*
+ * Class defining the component representing the visual Blocks board.  This is
+ * where the blocks are displayed and moved to the user (panel in main window).
+ * 
+ * Author: Michael G. Slack
+ * Date Written: 2021-11-18
+ * 
+ * ----------------------------------------------------------------------------
+ * 
+ * Date Revised: yyyy-mm-dd - xxxx.
+ * 
+ */
 namespace Blocks
 {
     public partial class BlocksBoardPanel : UserControl
     {
+        #region Properties
         private BlocksBoard _board = null;
         public BlocksBoard Board { set => _board = value; }
+        #endregion
 
         public BlocksBoardPanel()
         {
             InitializeComponent();
         }
 
+        #region Private component events
         private void BlocksBoardPanel_Paint(object sender, PaintEventArgs e)
         {
             int width = e.ClipRectangle.Width;
@@ -41,5 +56,6 @@ namespace Blocks
                     }
             }
         }
+        #endregion
     }
 }

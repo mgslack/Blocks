@@ -12,7 +12,7 @@ using GameStatistics;
  * IBM DevelopersWorks in March 2002.
  * Spiritually, blocks was a conversion of the Son-of-Tetris project, rewritten
  * in Turbo Pascal.  Later, whas rewritten in Java, and took advantage of the 
- * TetrisBean components developed by Scott Lee.
+ * TetrisBean components developed by Scott Clee.
  * 
  * Author: Michael Slack
  * Date Written: 2021-11-18

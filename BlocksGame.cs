@@ -13,7 +13,7 @@ using System.Threading;
  * 
  * ----------------------------------------------------------------------------
  * 
- * Revised: yyyy-mm-dd - xxxx.
+ * Revised: 2022-01-08 - Cleaned up speed up code in game thread.
  * 
  */
 namespace Blocks
@@ -161,11 +161,11 @@ namespace Blocks
                                     completeLines++;
                                     _totalLines++;
                                     // hit target, speed up things
-                                    if (_totalLines == 10) Delay = 400;
-                                    if (_totalLines == 20) Delay = 300;
-                                    if (_totalLines == 30) Delay = 200;
-                                    if (_totalLines == 40) Delay = 150;
-                                    if (_totalLines == 50) Delay = 120;
+                                    // 400, 300, 200, 150, 120
+                                    if (_totalLines == 10 || _totalLines == 20 || _totalLines == 30)
+                                        Delay -= 100;
+                                    if (_totalLines == 40) Delay -= 50;
+                                    if (_totalLines == 50) Delay -= 30;
                                 }
                             }
                             if (completeLines > 0)
