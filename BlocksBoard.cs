@@ -10,7 +10,7 @@
  * 
  * ----------------------------------------------------------------------------
  * 
- * Revised: yyyy-mm-dd - xxxx.
+ * Revised: 2022-01-25 - Removed 'set' on some of the properties, should be read-only.
  * 
  */
 namespace Blocks
@@ -29,10 +29,10 @@ namespace Blocks
 
         #region Properties
         private int _cols = 0;
-        public int Columns { get => _cols; set => _cols = value; }
+        public int Columns { get => _cols; }
 
         private int _rows = 0;
-        public int Rows { get => _rows; set => _rows = value; }
+        public int Rows { get => _rows; }
 
         private BoardPieceAdded _boardPieceAdded = null;
         public BoardPieceAdded BoardPieceAdded { get => _boardPieceAdded; set => _boardPieceAdded = value; }
